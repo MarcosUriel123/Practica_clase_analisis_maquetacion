@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: white;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #1f1f1f;
+    border-bottom: 1px solid #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
+}
+
+.logo {
+    width: 35px; /* Adjusted for smaller screens */
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-title {
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    margin-left: 10px;
+    white-space: nowrap; /* Prevents breaking into multiple lines */
+}
+
+.search-icon {
+    width: 25px; /* Reduced size for better alignment */
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.profile-icon {
+    width: 35px; /* Adjusted size */
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Message List */
+.message-list {
+    padding: 10px;
+    padding-top: 80px; /* Space for fixed header */
+    box-sizing: border-box; /* Prevents padding issues */
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    border: 1px solid #333;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.icon {
+    width: 45px; /* Adjusted size */
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.message-content {
+    flex: 1;
+    min-width: 150px; /* Ensures consistency */
+}
+
+.name {
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.text {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-left: 10px;
+    min-width: 60px;
+}
+
+.time {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.notification {
+    background-color: #007aff;
+    color: white;
+    font-size: 0.7rem;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    box-shadow: 0 0 10px #007aff;
+}
+
+/* Floating Buttons */
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+}
+
+.floating-button {
+    width: 50px; /* Reduced for smaller screens */
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.floating-button.blue {
+    background-color: #007aff;
+}
+
+.floating-button:hover {
+    transform: scale(1.1);
+}
+
+.floating-button img {
+    width: 65%;
+    height: 65%;
+    object-fit: contain;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 1rem; /* Adjusted for tablets */
+    }
+
+    .floating-buttons {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .floating-button {
+        width: 45px;
+        height: 45px;
+    }
+
+    .message {
+        flex-direction: row; /* Maintains row layout */
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .details {
+        min-width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 5px 10px;
+    }
+
+    .header-title {
+        font-size: 0.9rem; /* Smaller font for phones */
+    }
+
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .search-icon, .profile-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .floating-buttons {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .floating-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .name {
+        font-size: 0.9rem;
+    }
+
+    .text {
+        font-size: 0.8rem;
+    }
+
+    .notification {
+        font-size: 0.6rem;
+    }
+}
